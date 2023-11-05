@@ -1,0 +1,58 @@
+diff --git a/src/main.cpp b/src/main.cpp
+index a7871fcc16..ce309888fd 100644
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -2,6 +2,10 @@
+ // Copyright (c) 2011 The Bitcoin developers
+ // Distributed under the MIT/X11 software license, see the accompanying
+ // file license.txt or http://www.opensource.org/licenses/mit-license.php.
++# define INT64_MIN		(-9223372036854775807-1)
++# define INT64_MAX		(9223372036854775807)
++# define UINT64_MAX		(18446744073709551615)
++
+ #include "headers.h"
+ #include "checkpoints.h"
+ #include "db.h"
+diff --git a/src/net.cpp b/src/net.cpp
+index e0ac2abef0..e166791df1 100644
+--- a/src/net.cpp
++++ b/src/net.cpp
+@@ -3,6 +3,10 @@
+ // Distributed under the MIT/X11 software license, see the accompanying
+ // file license.txt or http://www.opensource.org/licenses/mit-license.php.
+ 
++# define INT64_MIN		(-9223372036854775807-1)
++# define INT64_MAX		(9223372036854775807)
++# define UINT64_MAX		(18446744073709551615)
++
+ #include "headers.h"
+ #include "irc.h"
+ #include "db.h"
+diff --git a/src/util.cpp b/src/util.cpp
+index 236c7f7c44..1eed5218cd 100644
+--- a/src/util.cpp
++++ b/src/util.cpp
+@@ -2,6 +2,9 @@
+ // Copyright (c) 2011 The Bitcoin developers
+ // Distributed under the MIT/X11 software license, see the accompanying
+ // file license.txt or http://www.opensource.org/licenses/mit-license.php.
++# define INT64_MIN		(-9223372036854775807-1)
++# define INT64_MAX		(9223372036854775807)
++# define UINT64_MAX		(18446744073709551615)
+ #include "headers.h"
+ #include "strlcpy.h"
+ #include <boost/program_options/detail/config_file.hpp>
+diff --git a/src/wallet.cpp b/src/wallet.cpp
+index 28babdb3e2..1edc95938f 100644
+--- a/src/wallet.cpp
++++ b/src/wallet.cpp
+@@ -2,6 +2,9 @@
+ // Copyright (c) 2011 The Bitcoin developers
+ // Distributed under the MIT/X11 software license, see the accompanying
+ // file license.txt or http://www.opensource.org/licenses/mit-license.php.
++# define INT64_MIN		(-9223372036854775807-1)
++# define INT64_MAX		(9223372036854775807)
++# define UINT64_MAX		(18446744073709551615)
+ 
+ #include "headers.h"
+ #include "db.h"

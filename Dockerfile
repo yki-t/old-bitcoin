@@ -39,3 +39,4 @@ RUN cd /tmp/ \
   && make -j$(nproc) \
   && make install
 
+WORKDIR /tmp/bitcoin
